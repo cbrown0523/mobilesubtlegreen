@@ -11,7 +11,7 @@ export default function App() {
         <Text style = {styles.header}>A Subtle Green</Text>
         <Text style = {styles.header2}>A design by Bryant Smith</Text>
         </View>
-        <View>
+        <View style={styles.navContainer2} >
         <View style={styles.navContainer} >
 <View style={styles.navButton}>
 
@@ -49,7 +49,8 @@ export default function App() {
 </TouchableHighlight>
 </View>
 </View>
-<ScrollView>
+</View>
+<ScrollView style={styles.scroll}>
 <View style= {styles.text}>
     <Text style = {styles.headerTxt}>The Article Title</Text>
 <View >
@@ -61,7 +62,7 @@ export default function App() {
  
   <View  style={{position: 'absolute', right: -5}}> 
     <Text style= {styles.headList}>Links: </Text>
-    <View style= {styles.list}>
+    <View style= {styles.list}> 
     <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" >
 <Text style={styles.navBtnTxt3}>Web Design</Text>
@@ -93,7 +94,6 @@ export default function App() {
 </View>
 </View>
 </ScrollView>
-        </View>
       </View>
   </View>
   </SafeAreaView>
@@ -101,17 +101,14 @@ export default function App() {
 }
 const styles = StyleSheet.create({
   container : {
-    flex:1,
-    flexDirection : "column",
     height:"100%",
   },
   text : {
     padding: 20,
-    fontFamily: 'helvetica',
     backgroundColor:"#869c80",
-    height:560
   
   },
+
   contentBorder : {
     backgroundColor: "#252f33",
     height : "100",
@@ -133,7 +130,15 @@ const styles = StyleSheet.create({
     backgroundColor : "#93c2cc",
     padding:15,
     paddingTop:1,
+    flex:.2,
   },
+  scroll:{
+    flex:1
+  },
+  navContainer2: {
+    flex: .05,
+    
+    },
     header : {
       fontSize:34,
       fontWeight:"800",
